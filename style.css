@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -58,13 +57,14 @@ color: black;
     width: 200px;
     font-size: 16px;
     box-sizing: border-box;
+    height:130px;
 }
 
 
 #parent .span {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top:-33px;
+left: 130px;
     font-size: 20px;
     color: white;
     cursor: pointer;
@@ -75,3 +75,141 @@ color: black;
     color: red;
 } 
 
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#text {
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+textarea {
+    color: black;
+}
+
+#color {
+    margin-bottom: 15px;
+    width: 5%;
+}
+
+#btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#btn:hover {
+    background-color: #a04588;
+}
+
+#parent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#parent div {
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 130px;
+}
+
+#parent .span {
+    position: absolute;
+    top: -33px;
+    left: 130px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 40px;
+}
+
+#parent .span:hover {
+    color: red;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #text {
+        width: 70%;
+    }
+
+    #btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #parent div {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #text {
+        width: 90%;
+    }
+
+    #btn {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #parent div {
+        width: 100%;
+    }
+
+    #parent .span {
+        left: 100px;
+        top: -50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    #text {
+        width: 100%;
+    }
+
+    #btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #parent div {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    #parent .span {
+        left: 90px;
+        top: -60px;
+    }
+}

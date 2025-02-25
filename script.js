@@ -7,25 +7,47 @@ const parent = document.querySelector("#parent");
 btn.addEventListener("click", () => {
     const not = heading.value.trim();
     const textcolor = color.value;
-    
+    heading.classList.add("book")
 
    const div = document.createElement("div");
     div.style.backgroundColor = textcolor;
     div.textContent = not;
 
+
+    const currentDate = new Date().toLocaleString();
+    // const date = currentDate.toLocaleString();
+    // const time =currenTime.toLocaleString()
+
+    const para=document.createElement("p")
+    // para.textContent=not;
+    div.append(para);
+
+
+    const para2 = document.createElement("p");
+    para2.textContent= `${currentDate}`;
+    div.append(para2)
+
+
+
     const span=document.createElement("span")
     span.classList.add("span");
+    span.innerHTML="&times";
 
     span.addEventListener("click" , (e)=>{
         e.target.parentElement.remove()
      })
 
-    span.innerHTML="&times";
+    
 
+     div.append(span);
     parent.append(div);
-    div.append(span);
    
-    heading .value=""
+    heading.value=""
 });
 
 
+
+// const currentDate = new Date();
+// console.log(currentDate.toLocaleString());  
+
+// console.log(currentDate);
