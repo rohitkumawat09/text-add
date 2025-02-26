@@ -10,13 +10,17 @@ btn.addEventListener("click", () => {
     const textcolor = color.value;
     heading.classList.add("book")
     if( not=== ""){
-        alert("plese enter text")
+        alert("plese enter text");
+        return;
     }
 
     const currentDate = new Date().toLocaleString();
     // const date = currentDate.toLocaleString();
     // const time =currenTime.toLocaleString();
-
+    if (!currentDate) {
+        alert("plese enter text ");
+        return;
+    }
     const div = document.createElement("div");
     div.style.backgroundColor = textcolor;
     // div.textContent = not;
